@@ -33,6 +33,7 @@ namespace GetMainModuleFileName
             Console.WriteLine(p.ProcessName);
             string? path = p.GetMainModuleFileName();
             Console.WriteLine(path ?? "null");
+            Console.WriteLine("StartInfo: " + p.MainModule?.FileName);
         }
         private static string GetInput()
         {
